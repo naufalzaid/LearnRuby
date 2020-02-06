@@ -87,4 +87,48 @@ arr.each{ |item|
     puts arr[x]
 }
 
-new arr = 
+# Split Array
+new_arr = %w(satu dua tiga empat lima)
+puts new_arr
+
+
+puts "=-=-=-=-=-"
+# Acak array dengan shuffle
+arr = [1,2,3,4,5]
+puts "#{arr.shuffle}"
+puts "#{arr}"
+puts "=-=-=-=-=-="
+
+# Looping array dengan while
+total = 0
+while total < 5 do
+    puts "total = #{total}"
+    total += 1
+end
+
+puts "=-=-=-=-==-=-="
+arr2 = [1,2,3,4,5]
+for item in arr2 
+    puts item
+end
+
+# Select array tradisional
+array = [60,70,80,90,100,45]    
+arrayBaru = []
+array.each{ |item|
+    if item >= 70
+        arrayBaru << item
+    end
+}
+puts arrayBaru
+
+puts "======================"
+# Select
+arrayBaru = array.select{ |item|
+    item < 100
+}
+puts "#{arrayBaru}"
+
+# one line select
+puts "#{array.select {|item| item < 100}}"
+
