@@ -29,3 +29,9 @@ end
     puts "Descending #{x}"
 end
 
+# Looping array dengan while
+total = 0 
+while total < 5 do
+    puts "total = #{total}"
+    total += 1
+end
