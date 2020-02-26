@@ -1,0 +1,75 @@
+body{
+	background-color: azure;
+	margin: 0;
+}
+
+.header{
+	width: 100%;
+	height: 100px;
+	background: cyan;
+	grid-area: head;
+	position: fixed;
+	z-index: 1
+}
+
+.sidebar{
+	width: 100px;
+	height: 100vh;
+	background: magenta;
+	grid-area: side;
+	position: fixed;
+}
+
+.content{
+	display: flex;
+	width:100%;
+	height: calc(100vh - 100px);
+	background: brown;
+	grid-area: content;
+	justify-content: space-evenly;
+}
+
+.forgrid{
+	display: grid;
+	grid-template-columns: 100px auto;
+	grid-template-rows: 100px auto;
+	grid-template-areas: "head head" "side content";
+}
+
+@media screen and (max-width: 1000px) {
+	.forgrid{
+		display: grid;
+		grid-template-columns: 100%;
+		grid-template-rows: 100px auto 100px;
+		grid-template-areas: "head" "content" "side" ;
+	}	
+	.sidebar{
+		width: 100%;
+		height: 50px;
+	}
+	.content{
+		width: 100%;
+		height: calc(100vh - 150px);
+	}
+
+}
+
+.card{
+	width: 100px;
+	height: 100px;
+	background-color: orange;
+	border-radius: 10px;
+	margin: 10px;
+}
+
+.card:first{
+
+}
+
+.card-group  .card:first-child{
+	background-color: chartreuse;
+}
+
+.card:first-of-type{
+	background-color: coral;
+}
